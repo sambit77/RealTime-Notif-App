@@ -16,7 +16,7 @@
     let stompClient = null;
 
     function connect() {
-    const socket = new SockJS('http://localhost:8080/ws');  // Correct the WebSocket URL
+    const socket = new SockJS('/ws');  // Correct the WebSocket URL
     stompClient = Stomp.over(socket);
 
     stompClient.connect({}, function (frame) {
